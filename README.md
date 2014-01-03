@@ -14,7 +14,30 @@
 
 5. Check out [localhost:8000](http://localhost:8000)
 
-# Coding style
+## Yo generators
+
+I stole these from [the README for yo-generator-kraken](https://github.com/paypal/generator-kraken#api) (we use this).
+
+`yo kraken`  
+Creates a new kraken application.
+
+`yo kraken:page myPage`  
+Generates a new controller, model, content bundle, and template named *myPage*.
+
+`yo kraken:controller myController`  
+Generates a new controller named *myController*.
+
+`yo kraken:model myModel`  
+Generates a new model named *myModel*.
+
+`yo kraken:template myTemplate`  
+Generates a new template named *myTemplate*.
+
+`yo kraken:locale myFile myCountry myLang`  
+Generates a new content bundle named *myFile*. Both *myCountry* and *myLang* are optional.
+
+
+## Coding style
 
 4-space indentations ALL the things. (CSS/LESS, HTML/Dust, JavaScript)
 

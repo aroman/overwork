@@ -10,9 +10,12 @@ module.exports = function (app) {
 
 
     app.get('/', function (req, res) {
-        
         res.render('index', model);
-        
+
+    });
+
+    app.get('/join', function (req, res) {
+        res.render('join');
     });
 
 };
