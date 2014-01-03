@@ -2,7 +2,7 @@
 
 "These pretzels are making me thirsty."
 
-# A quick note
+## A quick note
 
 Don't worry that running the server gives errors like
 ```
@@ -11,4 +11,4 @@ connect.multipart() will be removed in connect 3.0
 visit https://github.com/senchalabs/connect/wiki/Connect-3.0 for alternatives
 connect.limit() will be removed in connect 3.0
 ```
-They're harmless and Kraken is (https://github.com/paypal/kraken-js/pull/54)[fixing them imminently].
+They're harmless and Kraken is [fixing them imminently](https://github.com/paypal/kraken-js/pull/54).
