@@ -3,11 +3,7 @@
 {<body}
 <div class="row">
     <div class="col-md-4 col-md-offset-4">
-        <div style="text-align: center">
-            <h2>these pretzels are making me thirsty</h2>
-            <img style="border-radius: 10px; height: 250px; margin: 10px;"  src="http://i.imgur.com/tMA4k3j.jpg">
-            <a href="/join" class="btn btn-primary btn-lg">sign up for gg</a>
-        </div>
+        <h2>Sign up pl0x</h2>
         <form role="form">
             <div class="form-group">
                 <label for="email-input">Email address</label>
