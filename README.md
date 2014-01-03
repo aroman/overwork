@@ -14,6 +14,12 @@
 
 5. Check out [localhost:8000](http://localhost:8000)
 
+## How can I make the server auto-restart when the server code changes?
+
+1. Install nodemon globally: `npm -g install nodemon`
+
+2. Run nodemon: `nodemon -i .build -w config npm start` (if you don't ignore `.build/` it will reload when ANY file changes)
+
 ## Yo generators
 
 I stole these from [the README for yo-generator-kraken](https://github.com/paypal/generator-kraken#api) (we use this).
