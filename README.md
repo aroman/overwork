@@ -14,6 +14,10 @@
 
 5. Check out [localhost:8000](http://localhost:8000)
 
+# Coding style
+
+4-space indentations ALL the things. (CSS/LESS, HTML/Dust, JavaScript)
+
 ## About those warnings...
 
 Don't worry that running the server gives warnings like
