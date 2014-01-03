@@ -7,12 +7,12 @@
       <img style="border-radius: 10px; margin-bottom: 25px;" class="img-responsive" src="http://i.imgur.com/tMA4k3j.jpg">
       <form role="form">
         <div class="form-group">
-          <label for="exampleInputEmail1">Email address</label>
-          <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+          <label for="email-input">Email address</label>
+          <input type="email" class="form-control" id="email-input" placeholder="Enter email">
         </div>
         <div class="form-group">
-          <label for="exampleInputPassword1">Password</label>
-          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+          <label for="password-input">Password</label>
+          <input type="password" class="form-control" id="password-input" placeholder="Password">
         </div>
         <button type="submit" class="btn btn-default">Submit</button>
       </form>

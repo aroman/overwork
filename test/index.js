@@ -27,13 +27,13 @@ describe('index', function () {
     });
 
 
-    it('should say "hello"', function (done) {
+    it('should say "pretzels"', function (done) {
         request(mock)
             .get('/')
             .expect(200)
             .expect('Content-Type', /html/)
-            .expect(/Hello, /)
-            .end(function(err, res){
+            .expect(/pretzels /)
+            .end(function(err, res) {
                 if (err) return done(err);
                 done()
             });
