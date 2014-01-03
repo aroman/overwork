@@ -2,7 +2,7 @@
 
 "These pretzels are making me thirsty."
 
-## How do I run this?
+### How do I run this?
 
 1. Clone & enter the repo: `git clone git@github.com:aroman/overwork.git && cd overwork`
 
@@ -14,13 +14,13 @@
 
 5. Check out [localhost:8000](http://localhost:8000)
 
-## How can I make the server auto-restart when the server code changes?
+### How can I make the server auto-restart when the server code changes?
 
 1. Install nodemon globally: `npm -g install nodemon`
 
 2. Run nodemon: `nodemon -i .build -w config npm start` (if you don't ignore `.build/` it will reload when ANY file changes)
 
-## Yo generators
+### Yo generators
 
 I stole these from [the README for yo-generator-kraken](https://github.com/paypal/generator-kraken#api) (we use this).
 
@@ -43,11 +43,11 @@ Generates a new template named *myTemplate*.
 Generates a new content bundle named *myFile*. Both *myCountry* and *myLang* are optional.
 
 
-## Coding style
+### Coding style
 
 4-space indentations ALL the things. (CSS/LESS, HTML/Dust, JavaScript)
 
-## About those warnings...
+### About those warnings...
 
 Don't worry that running the server gives warnings like
 ```
