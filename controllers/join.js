@@ -14,7 +14,7 @@ module.exports = function (app) {
 
         res.format({
             json: function () {
-                res.json("not implemented");
+                res.json('not implemented');
             },
             html: function () {
                 res.render('join');
