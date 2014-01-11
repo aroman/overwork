@@ -1,12 +1,15 @@
 'use strict';
 
 
+var db = require('./lib/database');
+
 var kraken = require('kraken-js'),
     app = {};
 
 
 app.configure = function configure(nconf, next) {
     // Async method run on startup.
+    db.config(nconf.get('databaseConfig'));
     next(null);
 };
 
