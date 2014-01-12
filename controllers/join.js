@@ -30,10 +30,16 @@ module.exports = function (app) {
         }
 
         if (!validator.isLength(req.body.firstname, 2, 20)) {
-            errors.firstname = "Must be 2-20 characters";
+            errors.firstname = "2-20 characters";
         }
-        else if (!validator.isLength(req.body.lastname, 2, 20)) {
-            errors.lastname = "Must be 2-20 characters";
+        else if (!validator.isAlpha(req.body.firstname)) {
+            errors.firstname = "Letters only.";
+        }
+        else if (!validator.isLength(req.body.lastname, 1, 20)) {
+            errors.lastname = "1-20 characters";
+        }
+        else if (!validator.isAlpha(req.body.lastname)) {
+            errors.lastname = "Letters only.";
         }
 
         if (_.isEmpty(errors)) {
