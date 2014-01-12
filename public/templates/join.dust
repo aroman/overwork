@@ -7,6 +7,12 @@ Sign Up
 {<body}
     <h1 class="title">Sign Up</h1>
     <hr/>
+    <div class="center">
+        <div class="btn-group student-teacher-buttons">
+            <button type="button" class="btn btn-default active">Student</button>
+            <button type="button" class="btn btn-default">Teacher</button>
+        </div>
+    </div>
     <form role="form" action="/join" method="POST">
         <div class="row">
             <div class="form-group">
@@ -19,8 +25,8 @@ Sign Up
         <div class="row">
             <div class="form-group">
                 <div class="col-md-2 col-md-offset-2 label"><label for="firstname-input">Name</label></div>
-                <div class="col-md-2 first-name"><input type="firstname" name="firstname" class="form-control" id="firstname-input" autofocus="autofocus" placeholder="First Name"></div>
-                <div class="col-md-2 last-name"><input type="lastname" name="lastname" class="form-control" id="lastname-input" autofocus="autofocus" placeholder="Last Name"></div>
+                <div class="col-md-2 first-name"><input type="firstname" name="firstname" class="form-control" id="firstname-input" autofocus="autofocus" placeholder="First"></div>
+                <div class="col-md-2 last-name"><input type="lastname" name="lastname" class="form-control" id="lastname-input" autofocus="autofocus" placeholder="Last"></div>
                 <div class="col-md-3" class="error">&nbsp;</div>
                 <div class="col-md-1">&nbsp;</div>
             </div>
@@ -45,7 +51,7 @@ Sign Up
         <div class="row">
             <div class="col-md-5">&nbsp;</div>
             <div class="col-md-3">
-                <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+                <button type="submit" class="btn btn-primary btn-lg" data-loading-text="Loading...">Submit</button> <!-- Get the loading to work -->
             </div>
             <div class="col-md-4">&nbsp;</div>
         </div>
