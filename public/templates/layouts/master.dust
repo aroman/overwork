@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" />
-    <title>{+title /}</title>
+    <title>{+title /}Overwork</title>
     <link rel="stylesheet" href="css/app.css" />
 </head>
 <body>
@@ -18,8 +18,8 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="/">Home</a></li>
-                    <li><a href="/about">About</a></li>
+                    <li {@eq key=navbar value="1" type="number"}class="active"{/eq}><a href="/">Home</a></li>
+                    <li {@eq key=navbar value="2" type="number"}class="active"{/eq}><a href="/about">About</a></li>
                 </ul>
                 <a href="/join" class="btn btn-primary navbar-right navbar-btn">Sign Up</a>
             </div>

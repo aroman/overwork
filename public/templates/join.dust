@@ -1,8 +1,6 @@
 {>"layouts/master" /}
 
-{<title}
-Sign Up
-{/title}
+{<title}Sign Up - {/title}
 
 {<body}
     <h1 class="title">Sign Up</h1>
