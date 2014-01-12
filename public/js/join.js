@@ -37,9 +37,9 @@ var validate = function (event) {
             if (!validator.isLength(val, 6, 30)) {
                 error = "Must be 6-30 characers";
             }
+            // force validation of 'verify' field in case it matched
+            // before (it's not empty) but now we've changed the password
             else if ($("input[name=verify]").val())  {
-                // force validation of 'verify field' in case it matched before
-                // but now we've changed the password
                 $("input[name=verify]").trigger('input');
             }
             break;
