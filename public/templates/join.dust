@@ -29,29 +29,29 @@
         <div class="row">
             <div class="form-group {?errors.email}has-error{/errors.email}">
                 <div class="col-md-2 col-md-offset-2 label"><label for="email-input">Email</label></div>
-                <div class="col-md-4"><input type="email" name="email" class="form-control" {^errors}autofocus="autofocus"{/errors} {?errors.email}placeholder="{errors.email}"{:else}placeholder="jared@getoverwork.com" value="{values.email}"{/errors.email}></div>
+                <div class="col-md-4"><input type="email" name="email" id="email-input" class="form-control" {^errors}autofocus="autofocus"{/errors} {?errors.email}placeholder="{errors.email}"{:else}placeholder="jared@getoverwork.com" value="{values.email}"{/errors.email}></div>
                 <div class="col-md-4 error error-email">{errors.email}</div>
             </div>
         </div>
         <div class="row">
             <div class="form-group">
                 <div class="col-md-2 col-md-offset-2 label"><label for="firstname-input">Name</label></div>
-                <div class="col-md-2 first-name {?errors.firstname}has-error{/errors.firstname}"><input type="firstname" name="firstname" class="form-control" {?errors.firstname}placeholder="{errors.firstname}"{:else}value="{values.firstname}" placeholder="First"{/errors.firstname}></div>
-                <div class="col-md-2 last-name {?errors.lastname}has-error{/errors.lastname}"><input type="lastname" name="lastname" class="form-control" {?errors.lastname}placeholder="{errors.lastname}"{:else}value="{values.lastname}" placeholder="Last"{/errors.lastname}></div>
+                <div class="col-md-2 first-name {?errors.firstname}has-error{/errors.firstname}"><input type="firstname" name="firstname" id="firstname-input" class="form-control" {?errors.firstname}placeholder="{errors.firstname}"{:else}value="{values.firstname}" placeholder="First"{/errors.firstname}></div>
+                <div class="col-md-2 last-name {?errors.lastname}has-error{/errors.lastname}"><input type="lastname" name="lastname" id="lastname-input" class="form-control" {?errors.lastname}placeholder="{errors.lastname}"{:else}value="{values.lastname}" placeholder="Last"{/errors.lastname}></div>
                 <div class="col-md-4 error error-firstname error-lastname">{errors.firstname} {errors.lastname}</div>
             </div>
         </div>
         <div class="row">
             <div class="form-group {?errors.password}has-error{/errors.password}">
                 <div class="col-md-2 col-md-offset-2 label"><label for="password-input">Password</label></div>
-                <div class="col-md-4"><input type="password" name="password" class="form-control" placeholder="{errors.password}"></div>
+                <div class="col-md-4"><input type="password" name="password" id="password-input" class="form-control" placeholder="{errors.password}"></div>
                 <div class="col-md-4 error error-password">{errors.password}</div>
             </div>
         </div>
         <div class="row">
             <div class="form-group {?errors.verify}has-error{/errors.verify}">
                 <div class="col-md-2 col-md-offset-2 label"><label for="verify-input">Verify Password</label></div>
-                <div class="col-md-4"><input type="password" name="verify" class="form-control" placeholder="{errors.verify}"></div>
+                <div class="col-md-4"><input type="password" name="verify" id="verify-input" class="form-control" placeholder="{errors.verify}"></div>
                 <div class="col-md-4 error error-verify">{errors.verify}</div>
             </div>
         </div>
