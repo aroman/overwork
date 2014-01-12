@@ -3,6 +3,8 @@
   "version": "0.0.1",
   "dependencies": {
     "requirejs": "~2.1.9",
-    "bootstrap": "~3.0.3"
+    "bootstrap": "~3.0.3",
+    "node-validator": "~3.1.0",
+    "underscore": "~1.5.2"
   }
 }
