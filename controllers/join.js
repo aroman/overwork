@@ -11,7 +11,7 @@ module.exports = function (app) {
 
         var values = req.flash('values')[0];
         var errors = req.flash('errors')[0];
-        res.render('join', { values: values, errors: errors });
+        res.render('join', { values: values, errors: errors, navbar: 0 });
 
     });
 
@@ -41,17 +41,34 @@ module.exports = function (app) {
         else if (!validator.isAlpha(req.body.lastname)) {
             errors.lastname = "Letters only.";
         }
+        
+        req.body.email = validator.toString(validator.trim(validator.escape(req.body.email)));
+        req.body.firstname = validator.blacklist(validator.toString(validator.trim(validator.escape(req.body.firstname))), " ");
+        req.body.lastname = validator.blacklist(validator.toString(validator.trim(validator.escape(req.body.lastname))), " ");
 
         if (_.isEmpty(errors)) {
             var user = User(_.pick(req.body, ['email', 'password', 'firstname', 'lastname']));
-            user.save(function (err) {
-                err = "Something went wrong (this message is hard-coded and always shows)";
+            User.findOne({"email": req.body.email }, function (err, doc) {
+                console.log(doc);
                 if (err) {
-                    // XXX: In production, we shouldn't directly echo mongo errors to the client
-                    errors.misc = err;
-                    return tryAgain();
+                    res.status(500);
                 } else {
-                    return res.redirect('/');
+                    console.log(doc);
+                    if (doc) {
+                        user.save(function (save_err) {
+                            save_err = "Something went wrong (this message is hard-coded and always shows)";
+                            if (save_err) {
+                                // XXX: In production, we shouldn't directly echo mongo errors to the client
+                                errors.misc = save_err;
+                                return tryAgain();
+                            } else {
+                                return res.redirect('/');
+                            }
+                        });
+                    } else {
+                        errors.email = "Email is taken.";
+                        return tryAgain();
+                    }
                 }
             });
         } else {

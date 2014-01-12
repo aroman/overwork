@@ -17,7 +17,7 @@ var validate = function (event) {
                 error = "Must be 2-20 characers";
             }
             else if (!validator.isAlpha(val)) {
-                error = "No numbers please"
+                error = "Letters only"
             }
             break;
         case 'lastname':
@@ -25,7 +25,7 @@ var validate = function (event) {
                 error = "Must be no more than 20 characers";
             }
             else if (!validator.isAlpha(val)) {
-                error = "No numbers please"
+                error = "Letters only"
             }
             break;
         case 'password':

@@ -29,7 +29,7 @@
         <div class="row">
             <div class="form-group {?errors.email}has-error{/errors.email}">
                 <div class="col-md-2 col-md-offset-2 label"><label for="email-input">Email</label></div>
-                <div class="col-md-4"><input type="email" name="email" id="email-input" class="form-control" {^errors}autofocus="autofocus"{/errors} {?errors.email}placeholder="{errors.email}"{:else}placeholder="jared@getoverwork.com" value="{values.email}"{/errors.email}></div>
+                <div class="col-md-4"><input type="email" name="email" id="email-input" class="form-control" autofocus="autofocus" {?errors.email}placeholder="{errors.email}"{:else}placeholder="jared@getoverwork.com" value="{values.email}"{/errors.email}></div>
                 <div class="col-md-4 error error-email">&nbsp;</div>
             </div>
         </div>
