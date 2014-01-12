@@ -41,38 +41,27 @@ module.exports = function (app) {
         else if (!validator.isAlpha(req.body.lastname)) {
             errors.lastname = "Letters only.";
         }
-        
+
         req.body.email = validator.toString(validator.trim(validator.escape(req.body.email)));
         req.body.firstname = validator.blacklist(validator.toString(validator.trim(validator.escape(req.body.firstname))), " ");
         req.body.lastname = validator.blacklist(validator.toString(validator.trim(validator.escape(req.body.lastname))), " ");
 
         if (_.isEmpty(errors)) {
             var user = User(_.pick(req.body, ['email', 'password', 'firstname', 'lastname']));
-            User.findOne({"email": req.body.email }, function (err, doc) {
-                console.log(doc);
+            user.save(function (err) {
                 if (err) {
-                    res.status(500);
-                } else {
-                    console.log(doc);
-                    if (doc) {
-                        user.save(function (save_err) {
-                            save_err = "Something went wrong (this message is hard-coded and always shows)";
-                            if (save_err) {
-                                // XXX: In production, we shouldn't directly echo mongo errors to the client
-                                errors.misc = save_err;
-                                return tryAgain();
-                            } else {
-                                return res.redirect('/');
-                            }
-                        });
-                    } else {
-                        errors.email = "Email is taken.";
-                        return tryAgain();
+                    if (err.code === 11000) { // 11000 is duplicate key error
+                        errors.email = "Already in use";
+                    } else { // We have an error, but it's not a duplicate key error
+                        errors.misc = err;
                     }
+                    return tryAgain();
+                } else {
+                    return res.redirect('/');
                 }
             });
         } else {
-            tryAgain();
+            return tryAgain();
         }
 
         function tryAgain () {
