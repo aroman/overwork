@@ -32,9 +32,8 @@
             {+body /}
         </div>
     </div>
-<!-- <script data-main="js/app" src="components/requirejs/require.js"></script> -->
 <script type="text/javascript" src="components/jquery/jquery.min.js"></script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="components/bootstrap/dist/js/bootstrap.min.js"></script>
 {+scripts /}
 </body>
 </html>

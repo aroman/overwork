@@ -8,9 +8,9 @@ var mongoose = require('mongoose'),
 var userModel = function () {
 
         var userSchema = mongoose.Schema({
-            firstname: String,
-            lastname: String,
-            email: { type: String, unique: true },
+            firstname: { type: String, trim: true },
+            lastname: { type: String, trim: true },
+            email: { type: String, unique: true, trim: true },
             password: String // Automatically intercepted and bcrypt hashed
         });
 

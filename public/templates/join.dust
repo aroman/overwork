@@ -3,7 +3,7 @@
 {<title}Sign Up - {/title}
 
 {<css}
-<link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" href="components/font-awesome/css/font-awesome.min.css">
 {/css}
 
 {<scripts}

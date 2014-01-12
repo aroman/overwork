@@ -28,23 +28,18 @@ module.exports = function (app) {
         if (!validator.isLength(req.body.password, 6, 30)) {
             errors.password = "Must be 6-30 characters";
         }
-
         if (!validator.isLength(req.body.firstname, 2, 20)) {
             errors.firstname = "2-20 characters";
         }
         else if (!validator.isAlpha(req.body.firstname)) {
-            errors.firstname = "Letters only.";
+            errors.firstname = "Letters only";
         }
         else if (!validator.isLength(req.body.lastname, 1, 20)) {
             errors.lastname = "1-20 characters";
         }
         else if (!validator.isAlpha(req.body.lastname)) {
-            errors.lastname = "Letters only.";
+            errors.lastname = "Letters only";
         }
-
-        req.body.email = validator.toString(validator.trim(validator.escape(req.body.email)));
-        req.body.firstname = validator.blacklist(validator.toString(validator.trim(validator.escape(req.body.firstname))), " ");
-        req.body.lastname = validator.blacklist(validator.toString(validator.trim(validator.escape(req.body.lastname))), " ");
 
         if (_.isEmpty(errors)) {
             var user = User(_.pick(req.body, ['email', 'password', 'firstname', 'lastname']));
