@@ -20,19 +20,20 @@ module.exports = function (app) {
         var errors = {};
 
         if (!validator.isEmail(req.body.email)) {
-            errors.email = "invalid";
+            errors.email = "Invalid email address.";
         }
         if (!validator.equals(req.body.password, req.body.verify)) {
-            errors.verify = "didn't match";
+            errors.verify = "Passwords don't match.";
         }
         if (!validator.isLength(req.body.password, 6, 30)) {
-            errors.password = "must be 6-30 characters";
+            errors.password = "Password must be 6-30 characters.";
         }
-        if (!validator.isLength(req.body.lastname, 2, 20)) {
-            errors.name = "last name must be 2-20 characters";
-        }
+        
         if (!validator.isLength(req.body.firstname, 2, 20)) {
-            errors.name = "first name must be 2-20 characters";
+            errors.firstname = "2-20 characters";
+        }
+        else if (!validator.isLength(req.body.lastname, 2, 20)) {
+            errors.lastname = "2-20 characters";
         }
 
         if (_.isEmpty(errors)) {
