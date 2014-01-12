@@ -1,7 +1,6 @@
 {
     "databaseConfig": {
-        "host": "localhost",
-        "database": "overwork-authtest"
+        "mongo_uri": "mongodb://kramer:pretzels@ds061308.mongolab.com:61308/overwork-dev"
     },
     "bcrypt": {
         "difficulty": 3
