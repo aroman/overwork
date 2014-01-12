@@ -11,7 +11,7 @@ module.exports = function (app) {
 
         var values = req.flash('values')[0];
         var errors = req.flash('errors')[0];
-        res.render('join', { values: values, errors: errors, navbar: 0 });
+        res.render('join', { values: values, errors: errors });
 
     });
 

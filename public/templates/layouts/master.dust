@@ -19,8 +19,8 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li {@eq key=navbar value="1" type="number"}class="active"{/eq}><a href="/">Home</a></li>
-                    <li {@eq key=navbar value="2" type="number"}class="active"{/eq}><a href="/about">About</a></li>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/about">About</a></li>
                 </ul>
                 <a href="/join" class="btn btn-primary navbar-right navbar-btn">Sign Up</a>
             </div>
@@ -34,6 +34,9 @@
     </div>
 <script type="text/javascript" src="components/jquery/jquery.min.js"></script>
 <script type="text/javascript" src="components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script type="text/javascript">
+    $("li > a[href='" + location.pathname + "']").parent().addClass('active');
+</script>
 {+scripts /}
 </body>
 </html>
