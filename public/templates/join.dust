@@ -1,8 +1,6 @@
 {>"layouts/master" /}
 
-{<title}
-Sign Up
-{/title}
+{<title}Sign Up - {/title}
 
 {<scripts}
 <script type="text/javascript" src="components/node-validator/validator.min.js"></script>
