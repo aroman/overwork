@@ -20,7 +20,7 @@ Sign Up
         <div class="row">
             <div class="form-group {?errors.email}has-error{/errors.email}">
                 <div class="col-md-2 col-md-offset-2 label"><label for="email-input">Email</label></div>
-                <div class="col-md-4"><input type="email" name="email" class="form-control" id="email-input" value="{values.email}" placeholder="jared@getoverwork.com"></div>
+                <div class="col-md-4"><input type="email" name="email" class="form-control" id="email-input" value="{values.email}" {^errors}autofocus="autofocus"{/errors} placeholder="jared@getoverwork.com"></div>
                 <div class="col-md-3" class="error">{errors.email}</div>
                 <div class="col-md-1">&nbsp;</div>
             </div>
@@ -28,8 +28,8 @@ Sign Up
         <div class="row">
             <div class="form-group {?errors.firstname}has-error{/errors.firstname}">
                 <div class="col-md-2 col-md-offset-2 label"><label for="firstname-input">Name</label></div>
-                <div class="col-md-2 first-name"><input type="firstname" name="firstname" class="form-control" id="firstname-input" autofocus="autofocus" value="{values.firstname}" placeholder="First"></div>
-                <div class="col-md-2 last-name"><input type="lastname" name="lastname" class="form-control" id="lastname-input" autofocus="autofocus" value="{values.lastname}" placeholder="Last"></div>
+                <div class="col-md-2 first-name"><input type="firstname" name="firstname" class="form-control" id="firstname-input" value="{values.firstname}" placeholder="First"></div>
+                <div class="col-md-2 last-name"><input type="lastname" name="lastname" class="form-control" id="lastname-input" value="{values.lastname}" placeholder="Last"></div>
                 <div class="col-md-3" class="error">&nbsp;</div>
                 <div class="col-md-1">{errors.name}</div>
             </div>
