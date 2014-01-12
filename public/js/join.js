@@ -51,7 +51,6 @@ var validate = function (event) {
             break;
     }
 
-    $(".error-" + name).html(error);
     if (error) {
         target.parent().addClass("has-error");
         invalid_inputs = _.uniq(_.union(invalid_inputs, [name]));
@@ -60,6 +59,7 @@ var validate = function (event) {
         invalid_inputs = _.without(invalid_inputs, name);
     }
 
+    $(".error-" + name).html(error);
     $("button[type=submit]").prop('disabled', !_.isEmpty(invalid_inputs));
 };
 
