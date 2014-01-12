@@ -17,12 +17,15 @@
                 </button>
                 <a class="navbar-brand" href="/">Overwork</a>
             </div>
-            <div class="navbar-collapse collapse">
+            <div class="collapse navbar-collapse">
                 <ul class="nav navbar-nav">
                     <li><a href="/">Home</a></li>
                     <li><a href="/about">About</a></li>
                 </ul>
-                <a href="/join" class="btn btn-primary navbar-right navbar-btn">Sign Up</a>
+                <div class="nav navbar-nav navbar-right">
+	                <a href="/join" class="btn btn-primary navbar-btn">Sign Up</a>&nbsp;
+	                <a href="/login" class="btn btn-info navbar-btn">Log In</a>
+	            </div>
             </div>
         </div>
     </div>
