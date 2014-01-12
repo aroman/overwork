@@ -4,6 +4,7 @@
     <meta charset="utf-8" />
     <title>{+title /}Overwork</title>
     <link rel="stylesheet" href="css/app.css" />
+    {+css /}
 </head>
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">

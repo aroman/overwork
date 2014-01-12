@@ -9,17 +9,23 @@ var validate = function (event) {
     switch (target.attr('name')) {
         case 'email':
             if (!validator.isEmail(val)) {
-                error = "Invalid :(";
+                error = "Invalid <i class='fa fa-frown-o'></i>";
             }
             break;
         case 'firstname':
             if (!validator.isLength(val, 1, 20)) {
                 error = "Must be 2-20 characers";
             }
+            else if (!validator.isAlpha(val)) {
+                error = "Must not include numbers."
+            }
             break;
         case 'lastname':
             if (!validator.isLength(val, 1, 20)) {
                 error = "Must be 2-20 characers";
+            }
+            else if (!validator.isAlpha(val)) {
+                error = "Must not include numbers."
             }
             break;
         case 'password':
@@ -29,7 +35,7 @@ var validate = function (event) {
             break;
         case 'verify':
             if (!validator.equals(val, $("input[name=password]").val())) {
-                error = "Doesn't match :(";
+                error = "Doesn't match <i class='fa fa-frown-o'></i>";
             }
             break;
     }

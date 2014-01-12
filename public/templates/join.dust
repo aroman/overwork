@@ -2,6 +2,10 @@
 
 {<title}Sign Up - {/title}
 
+{<css}
+<link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
+{/css}
+
 {<scripts}
 <script type="text/javascript" src="components/node-validator/validator.min.js"></script>
 <script type="text/javascript" src="components/underscore/underscore-min.js"></script>
@@ -21,13 +25,12 @@
             <button type="button" class="btn btn-default">Teacher</button>
         </div>
     </div>
-    <form role="form" action="/join" method="POST">
+    <form role="form" action="/join" method="POST" id="signup">
         <div class="row">
             <div class="form-group {?errors.email}has-error{/errors.email}">
                 <div class="col-md-2 col-md-offset-2 label"><label for="email-input">Email</label></div>
                 <div class="col-md-4"><input type="email" name="email" class="form-control" {^errors}autofocus="autofocus"{/errors} {?errors.email}placeholder="{errors.email}"{:else}placeholder="jared@getoverwork.com" value="{values.email}"{/errors.email}></div>
                 <div class="col-md-4 error error-email">{errors.email}</div>
-                <!-- <div class="col-md-4">&nbsp;</div> -->
             </div>
         </div>
         <div class="row">
