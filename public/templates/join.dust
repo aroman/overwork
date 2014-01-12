@@ -19,8 +19,8 @@ Sign Up
         <div class="row">
             <div class="form-group">
                 <div class="col-md-2 col-md-offset-2 label"><label for="firstname-input">Name</label></div>
-                <div class="col-md-2"><input type="firstname" name="firstname" class="form-control" id="firstname-input" autofocus="autofocus" placeholder="First Name"></div>
-                <div class="col-md-2"><input type="lastname" name="lastname" class="form-control" id="lastname-input" autofocus="autofocus" placeholder="Last Name"></div>
+                <div class="col-md-2 first-name"><input type="firstname" name="firstname" class="form-control" id="firstname-input" autofocus="autofocus" placeholder="First Name"></div>
+                <div class="col-md-2 last-name"><input type="lastname" name="lastname" class="form-control" id="lastname-input" autofocus="autofocus" placeholder="Last Name"></div>
                 <div class="col-md-3" class="error">&nbsp;</div>
                 <div class="col-md-1">&nbsp;</div>
             </div>
