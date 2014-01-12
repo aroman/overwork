@@ -10,16 +10,24 @@ Sign Up
     <form role="form" action="/join" method="POST">
         <div class="row">
             <div class="form-group">
-                <div class="col-md-3 col-md-offset-2 label"><label for="email-input">Email</label></div>
-                <div class="col-md-3"><input type="email" name="email" class="form-control" id="email-input" placeholder="jared@overwork.com"></div>
+                <div class="col-md-3 col-md-offset-2 label"><label for="firstname-input">First name</label></div>
+                <div class="col-md-3"><input type="firstname" name="firstname" class="form-control" id="firstname-input" autofocus="autofocus"></div>
                 <div class="col-md-3" class="error">&nbsp;</div>
                 <div class="col-md-1">&nbsp;</div>
             </div>
         </div>
         <div class="row">
             <div class="form-group">
-                <div class="col-md-3 col-md-offset-2 label"><label for="username-input">Username</label></div>
-                <div class="col-md-3"><input type="username" name="username" class="form-control" id="username-input" placeholder="jzone3"></div>
+                <div class="col-md-3 col-md-offset-2 label"><label for="lastname-input">Last name</label></div>
+                <div class="col-md-3"><input type="lastname" name="lastname" class="form-control" id="lastname-input" placeholder=""></div>
+                <div class="col-md-3" class="error">&nbsp;</div>
+                <div class="col-md-1">&nbsp;</div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group">
+                <div class="col-md-3 col-md-offset-2 label"><label for="email-input">Email</label></div>
+                <div class="col-md-3"><input type="email" name="email" class="form-control" id="email-input" placeholder=""></div>
                 <div class="col-md-3" class="error">&nbsp;</div>
                 <div class="col-md-1">&nbsp;</div>
             </div>
@@ -34,8 +42,8 @@ Sign Up
         </div>
         <div class="row">
             <div class="form-group">
-                <div class="col-md-3 col-md-offset-2 label"><label for="verify-password-input">Verify Password</label></div>
-                <div class="col-md-3"><input type="verify-password" name="verify-password" class="form-control" id="verify-password-input"></div>
+                <div class="col-md-3 col-md-offset-2 label"><label for="verify-input">Password (again)</label></div>
+                <div class="col-md-3"><input type="password" name="verify" class="form-control" id="verify-input"></div>
                 <div class="col-md-3" class="error">&nbsp;</div>
                 <div class="col-md-1">&nbsp;</div>
             </div>

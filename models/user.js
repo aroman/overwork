@@ -1,7 +1,5 @@
-/**
- * A model for our user
- */
 'use strict';
+
 var mongoose = require('mongoose'),
     bcrypt = require('bcrypt'),
     nconf = require('nconf');
@@ -10,9 +8,10 @@ var mongoose = require('mongoose'),
 var userModel = function () {
 
         var userSchema = mongoose.Schema({
-            name: String,
-            login: { type: String, unique: true },  //Ensure logins are unique.
-            password: String //We'll store bCrypt hashed passwords.  Just say no to plaintext!
+            firstname: String,
+            lastname: String,
+            email: { type: String, unique: true },
+            password: String // Automatically intercepted and bcrypt hashed
         });
 
         /**
