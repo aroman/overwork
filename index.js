@@ -16,16 +16,6 @@ app.configure = function configure(nconf, next) {
     // Async method run on startup.
     db.config(nconf.get('databaseConfig'));
 
-    //Add two users to the system.
-    var u1 = new User({
-        name: 'Avi Romanoff',
-        login: 'aroman',
-        password: 'password'
-    });
-    console.log(u1);
-
-    u1.save();
-
     // Tell passport to use our newly created local strategy for authentication
     passport.use(auth.localStrategy());
 
