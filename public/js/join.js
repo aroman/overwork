@@ -9,15 +9,12 @@ var validate = function (event) {
     var name = target.attr('name');
     var val = target.val();
 
-    if (!val) return;
-
     var error = "";
 
     switch (name) {
         case 'email':
             if (!validator.isEmail(val)) {
                 error = "Invalid <i class='fa fa-frown-o'></i>";
-            } else {
             }
             break;
         case 'firstname':
@@ -30,7 +27,7 @@ var validate = function (event) {
             break;
         case 'lastname':
             if (!validator.isLength(val, 1, 20)) {
-                error = "Must be no more than 20 characers";
+                error = "Must be less than 20 characers";
             }
             else if (!validator.isAlpha(val)) {
                 error = "Letters only"
@@ -40,9 +37,11 @@ var validate = function (event) {
             if (!validator.isLength(val, 6, 30)) {
                 error = "Must be 6-30 characers";
             }
-            // force validation of 'verify field' in case it matched before
-            // but now we've changed the password
-            $("input[name=verify]").trigger('input');
+            else if ($("input[name=verify]").val())  {
+                // force validation of 'verify field' in case it matched before
+                // but now we've changed the password
+                $("input[name=verify]").trigger('input');
+            }
             break;
         case 'verify':
             if (!validator.equals(val, $("input[name=password]").val())) {
@@ -59,8 +58,8 @@ var validate = function (event) {
         invalid_inputs = _.without(invalid_inputs, name);
     }
 
-    $(".error-" + name).html(error);
+    val && $(".error-" + name).html(error);
     $("button[type=submit]").prop('disabled', !_.isEmpty(invalid_inputs));
 };
 
-$(".form-control").bind('input', _.throttle(validate, 100));
+$(".form-control").bind('input', validate);
