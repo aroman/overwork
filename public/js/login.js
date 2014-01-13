@@ -11,8 +11,12 @@ var validate = function (event) {
 
     var error = "";
 
-    if (!validator.isEmail($(event.target).val())) {
-        error = "Invalid <i class='fa fa-frown-o'></i>";
+    switch (name) {
+        case 'email':
+            if (!validator.isEmail(val)) {
+                error = "Invalid <i class='fa fa-frown-o'></i>";
+            }
+            break;
     }
 
     if (error) {
