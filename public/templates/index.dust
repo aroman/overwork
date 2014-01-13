@@ -3,5 +3,6 @@
 {<body}
     <h1 class="title">Overwork</h1>
     <hr>
+    <h3>Logged in as: {user.email}</h3>
     <!-- <img src="http://fivetechsoftware.com/wp-content/uploads/2013/12/calendarperpetual-calendar-05-fn6xrxmt.gif" style="width:100%;"> -->
 {/body}
