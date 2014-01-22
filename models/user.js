@@ -2,6 +2,7 @@
 
 var mongoose = require('mongoose'),
     bcrypt = require('bcrypt'),
+    uuid = require('node-uuid'),
     nconf = require('nconf');
 
 
@@ -11,6 +12,8 @@ var userModel = function () {
             firstname: { type: String, trim: true },
             lastname: { type: String, trim: true },
             email: { type: String, unique: true, trim: true },
+            verify_token: { type: String, unique: true, default: uuid.v4 },
+            is_verified: { type: Boolean, default: false },
             password: String // Automatically intercepted and bcrypt hashed
         });
 

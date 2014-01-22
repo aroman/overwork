@@ -1,9 +1,10 @@
 'use strict';
 
 var _ = require('underscore');
-var path = require('path');
 var validator = require('validator');
+var mail = require('../lib/mail');
 var User = require('../models/user');
+var passport = require('passport');
 
 module.exports = function (app) {
 
@@ -52,7 +53,8 @@ module.exports = function (app) {
                     }
                     return tryAgain();
                 } else {
-                    return res.redirect('/');
+                    mail.sendVerifyEmail(user);
+                    passport.authenticate('local', { successRedirect: '/' })(req, res);
                 }
             });
         } else {

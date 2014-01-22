@@ -2,6 +2,11 @@
     "databaseConfig": {
         "mongo_uri": "mongodb://kramer:pretzels@ds061308.mongolab.com:61308/overwork-dev"
     },
+    "AWSConfig": {
+        "AccessKeyID": "AKIAIY5ZSTQKNMOIBZKA",
+        "SecretKey": "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",
+        "ServiceUrl": null
+    },
     "bcrypt": {
         "difficulty": 3
     }
