@@ -1,0 +1,8 @@
+{>"layouts/master" /}
+
+{<title}Settings - {/title}
+
+{<body}
+    <h2>Settings</h2>
+    <h4>Insert settings here</h4>
+{/body}
