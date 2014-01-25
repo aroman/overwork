@@ -42,6 +42,12 @@ module.exports = function (app) {
             errors.lastname = "Letters only";
         }
 
+        var tryAgain = function () {
+            req.flash('values', _.omit(req.body, ['password', 'verify']));
+            req.flash('errors', errors);
+            return res.redirect('/join');
+        };
+
         if (_.isEmpty(errors)) {
             var user = User(_.pick(req.body, ['email', 'password', 'firstname', 'lastname']));
             user.save(function (err) {
@@ -60,12 +66,6 @@ module.exports = function (app) {
         } else {
             return tryAgain();
         }
-
-        var tryAgain = function () {
-            req.flash('values', _.omit(req.body, ['password', 'verify']));
-            req.flash('errors', errors);
-            return res.redirect('/join');
-        };
     });
 
 };
