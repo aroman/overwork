@@ -2,6 +2,7 @@
   "name": "overwork",
   "version": "0.0.1",
   "description": "These pretzels are making me thirsty.",
+  "repository": "https://github.com/aroman/overwork",
   "author": "",
   "main": "index.js",
   "scripts": {

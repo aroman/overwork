@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "dependencies": {
     "bootstrap": "~3.0.3",
-    "node-validator": "~3.1.0",
+    "validator": "git@github.com:chriso/validator.js.git#3.2.0",
     "underscore": "~1.5.2",
     "font-awesome": "~4.0.3"
   }

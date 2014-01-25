@@ -61,11 +61,11 @@ module.exports = function (app) {
             return tryAgain();
         }
 
-        function tryAgain () {
+        var tryAgain = function () {
             req.flash('values', _.omit(req.body, ['password', 'verify']));
             req.flash('errors', errors);
             return res.redirect('/join');
-        }
+        };
     });
 
 };
